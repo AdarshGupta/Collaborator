@@ -164,6 +164,9 @@ header
             border-color @background
             shadow-level(2)
 
+    #login-name-link
+        color white
+
 //Ends Header Log in
 
 // Side navigation
@@ -228,4 +231,220 @@ header
         margin-top 40px
         padding-left $side-nav-large
 
+// problem insert form
+.new-problem-container
+    position relative
+    background #FFF
+    padding 20px
+    margin 20px
+    shadow-level(2)
+    .fa-close
+        position absolute
+        top 0
+        right 0
+        padding 20px  
+    label
+        display block
+        margin-bottom 10px
+    textarea, input
+        width 100%
     
+input, select, textarea
+    color black
+    background #FFF
+    border solid 2px light-grey
+    border-radius 2px
+    font-weight 800
+    width 100%
+    padding 6px 10px
+    margin-bottom 10px  
+    &.static-input
+        border none
+        background transparent
+
+//the Tags adding
+.list-group
+    list-style none
+    padding 0
+
+    input
+        width 25%
+    label
+        display inline
+
+.panel-body
+    .form-group
+        lost-column 1/2
+
+.autoform-remove-item.btn
+    background light-grey
+    box-shadow none
+    border none
+    border-radius 50%
+    font-size 1em
+    height: 25px
+    width: 25px
+    text-align: center
+    display: block
+    padding: 0
+ 
+.autoform-add-item.btn
+    background light-grey
+    box-shadow none
+    border none
+    border-radius 50%
+    font-size 1em
+    height: 30px
+    width: 30px
+    text-align: center
+    display: block
+    padding: 0
+     
+ 
+.autoform-remove-item-wrap
+    vertical-align middle
+
+.btn, button
+    display inline-block
+    cursor pointer
+    background purp
+    color #FFF
+    text-decoration none
+    text-transform uppercase
+    padding 5px 15px
+    border solid 3px purp
+    border-radius 2px
+    font-weight 800
+    shadow-level(1)
+    trans()
+    &:hover
+        background @background - 20
+        border-color @background
+        shadow-level(2)
+    &.btn-primary
+        background red
+        border-color red
+        color white
+        &:hover
+            background @background - 40
+            border-color @background
+    &.btn-deny
+        background red
+        border solid 3px @background
+        &:hover
+            background @background - 20
+            border-color @background
+    &.btn-text
+        color red
+        background transparent
+        border solid 2px red
+        shadow-level(0)
+        &:hover
+            background red
+            border-color @background
+            shadow-level(1)
+    &.btn-text-dark
+        color #FFF
+        background transparent
+        border solid 2px #FFF
+        shadow-level(0)
+        &:hover
+            background #FFF
+            color red
+            border-color @background
+            shadow-level(1)
+    &.btn-confirmation
+        color black
+        background green
+        border solid 2px @background
+        &:hover
+            background @background - 20
+            border-color dark-purp
+    &.btn-cancel
+        color #FFF
+        background transparent
+        border solid 2px #FFF
+        opacity 0.4
+        shadow-level(-1)
+        &:hover
+            background red
+            color #FFF
+            opacity 1
+            shadow-level(2)
+            border-color @background
+
+
+// Each problem card
+.problem
+    background #FFF
+    padding 10px 20px 20px
+    margin 20px
+    position relative
+    z-index 1
+    shadow-level(1)
+    trans()
+    .btn-primary, .btn-deny
+            display block
+    
+    &.in-menu
+        background teal
+        color #FFF
+        h3
+            border-bottom: rgba(255,255,255, 0.6) solid 3px
+        .btn-primary
+            display none
+        .btn-deny  
+            display block
+    h3
+        font-size: 2em;
+        opacity: 0.8;
+        border-bottom: rgba(0,0,0, 0.3) solid 3px
+        margin-top 0px
+        margin-bottom 10px
+        padding-bottom 10px
+    p
+        opacity: 0.4
+    button
+        margin-top 20px
+    .fa-trash, .fa-pencil
+        opacity 0.3
+        cursor pointer
+        position absolute
+        top 0
+        right 0
+        font-size 1.6em  
+        display block
+        padding 20px
+        color black
+        trans()
+        &:hover
+            color red
+            opacity 0.6
+    .fa-pencil
+        right 40px
+        &:hover
+            color purp
+    .ingredient
+        display inline-block
+        margin-right 10px
+        font-size 1.2em
+    &:hover
+        shadow-level(3)
+        // animation card 0.6s ease 1 forwards
+
+
+
+
+
+
+@keyframes card
+    0%
+        transform translate3d(0, 0, 0)
+    50%
+        transform translate3d(0, -135px, 0)
+    51%
+        z-index 10
+        transform translate3d(0, -135px, 0)
+    100%
+        z-index 10
+        transform translate3d(0, 0, 0)

@@ -3,7 +3,6 @@ Problems = new Mongo.Collection('problems');
 Tags = new SimpleSchema({
 	name: {
 		type: String,
-		label: "Tags"
 	}
 });
 
@@ -17,7 +16,8 @@ ProblemSchema = new SimpleSchema({
 		label: "Description"
 	},
 	tag: {
-		type: [Tags]
+		type: [Tags],
+		label: "Tags"
 	},
 	author: {
 		type: String,
