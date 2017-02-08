@@ -386,15 +386,6 @@ input, select, textarea
     .btn-primary, .btn-deny
             display block
     
-    &.in-menu
-        background teal
-        color #FFF
-        h3
-            border-bottom: rgba(255,255,255, 0.6) solid 3px
-        .btn-primary
-            display none
-        .btn-deny  
-            display block
     h3
         font-size: 2em;
         opacity: 0.8;
@@ -432,7 +423,60 @@ input, select, textarea
         shadow-level(3)
         // animation card 0.6s ease 1 forwards
 
+.upvote
+    display inline-block
+    cursor pointer
+    background white
+    color green
+    text-decoration none
+    text-transform uppercase
+    padding 5px 15px
+    border solid 2px green
+    border-radius 2px
+    font-weight 400
+    shadow-level(1)
+    trans()
+    &:hover
+        background green
+        border-color @background
+        shadow-level(2)
+        color white
 
+.downvote
+    display inline-block
+    cursor pointer
+    background white
+    color red
+    text-decoration none
+    text-transform uppercase
+    padding 5px 15px
+    margin-right 10px
+    border solid 2px red
+    border-radius 2px
+    font-weight 400
+    shadow-level(1)
+    trans()
+    &:hover
+        background red
+        border-color @background
+        shadow-level(2)
+        color white
+
+// problem card end
+
+// problemSingle.html styles
+
+.problemSingle
+    background #FFF
+    padding 10px 20px 20px
+    margin 20px
+    position relative
+    z-index 1
+    shadow-level(1)
+    trans()
+
+    p
+        opacity: 0.4
 
 
 
