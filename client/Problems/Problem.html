@@ -3,8 +3,8 @@
 		<h3><i class="fa fa-quora" aria-hidden="true"></i> {{problem}}</h3>
 		<p>{{description}}</p>
 
-		<button class="upvote">Upvote <i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-		<button class="downvote">Downvote <i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+		<button class="upvote" data-id="{{_id}}">Upvote <i class="fa fa-thumbs-up" aria-hidden="true"></i> {{upvotes}}</button>
+		<button class="downvote" data-id="{{_id}}">Downvote <i class="fa fa-thumbs-down" aria-hidden="true"></i> {{downvotes}}</button>
 
 		<a href="/problem/{{_id}}">View Answers</a>
 	</article>	
