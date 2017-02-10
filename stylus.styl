@@ -423,56 +423,56 @@ input, select, textarea
         shadow-level(3)
         // animation card 0.6s ease 1 forwards
 
-.upvote
-    display inline-block
-    cursor pointer
-    background white
-    color green
-    text-decoration none
-    text-transform uppercase
-    padding 5px 15px
-    border solid 2px green
-    border-radius 2px
-    font-weight 400
-    shadow-level(1)
-    trans()
-    &:hover
-        background green
-        border-color @background
-        shadow-level(2)
-        color white
-    &:focus
-        outline 0
+    .upvote
+        display inline-block
+        cursor pointer
+        background white
+        color green
+        text-decoration none
+        text-transform uppercase
+        padding 5px 15px
+        border solid 2px green
+        border-radius 2px
+        font-weight 400
+        shadow-level(1)
+        trans()
+        &:hover
+            background green
+            border-color @background
+            shadow-level(2)
+            color white
+        &:focus
+            outline 0
 
-    .fa-thumbs-up
-        margin-left 3px
-        font-size 20px
+        .fa-thumbs-up
+            margin-left 3px
+            font-size 20px
 
-.downvote
-    display inline-block
-    cursor pointer
-    background white
-    color red
-    text-decoration none
-    text-transform uppercase
-    padding 5px 15px
-    margin-right 10px
-    border solid 2px red
-    border-radius 2px
-    font-weight 400
-    shadow-level(1)
-    trans()
-    &:hover
-        background red
-        border-color @background
-        shadow-level(2)
-        color white
-    &:focus
-        outline 0
+    .downvote
+        display inline-block
+        cursor pointer
+        background white
+        color red
+        text-decoration none
+        text-transform uppercase
+        padding 5px 15px
+        margin-right 10px
+        border solid 2px red
+        border-radius 2px
+        font-weight 400
+        shadow-level(1)
+        trans()
+        &:hover
+            background red
+            border-color @background
+            shadow-level(2)
+            color white
+        &:focus
+            outline 0
 
-    .fa-thumbs-down
-        margin-left 3px
-        font-size 20px
+        .fa-thumbs-down
+            margin-left 3px
+            font-size 20px
 
 // problem card end
 
@@ -487,10 +487,123 @@ input, select, textarea
     shadow-level(1)
     trans()
 
+    h3
+        font-size: 2em;
+        opacity: 0.8;
+        border-bottom: rgba(255,0,0, 0.3) solid 3px
+        margin-top 0px
+        margin-bottom 10px
+        padding-bottom 10px
+
     p
         opacity: 0.4
 
+// answer insert form
+.new-answer-container
+    position relative
+    background #FFF
+    padding 20px
+    margin 20px
+    shadow-level(2)
+    .fa-close
+        position absolute
+        top 0
+        right 0
+        padding 20px  
+    label
+        display block
+        margin-bottom 10px
+    textarea, input
+        width 100%
+    
+input, select, textarea
+    color black
+    background #FFF
+    border solid 2px light-grey
+    border-radius 2px
+    font-weight 800
+    width 100%
+    padding 6px 10px
+    margin-bottom 10px  
+    &.static-input
+        border none
+        background transparent
 
+
+.solution
+    background #FFF
+    padding 10px 20px 20px
+    margin 20px
+    position relative
+    z-index 1
+    shadow-level(1)
+    trans()
+    .btn-primary, .btn-deny
+            display block
+    
+    h3
+        font-size: 2em;
+        opacity: 0.8;
+        border-bottom: rgba(0,0,0, 0.3) solid 3px
+        margin-top 0px
+        margin-bottom 10px
+        padding-bottom 10px
+    p
+        opacity: 0.4
+    button
+        margin-top 20px
+    
+    &:hover
+        shadow-level(3)
+        // animation card 0.6s ease 1 forwards
+
+    .upvote
+        display inline-block
+        cursor pointer
+        background white
+        color green
+        text-decoration none
+        text-transform uppercase
+        padding 5px 15px
+        border none
+        font-weight 400
+        trans()
+        &:hover
+            background green
+            border-color @background
+            shadow-level(2)
+            color white
+        &:focus
+            outline 0
+
+        .fa-thumbs-up
+            margin-left 3px
+            font-size 20px
+
+    .downvote
+        display inline-block
+        cursor pointer
+        background white
+        color red
+        text-decoration none
+        text-transform uppercase
+        padding 5px 15px
+        margin-right 10px
+        border none
+        font-weight 400
+        shadow-level(1)
+        trans()
+        &:hover
+            background red
+            border-color @background
+            shadow-level(2)
+            color white
+        &:focus
+            outline 0
+
+        .fa-thumbs-down
+            margin-left 3px
+            font-size 20px
 
 
 @keyframes card

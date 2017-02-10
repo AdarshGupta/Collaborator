@@ -1,0 +1,11 @@
+<template name="solution">
+	<article class="solution">
+		<h3>Solution: </h3>
+		<h2>{{answer}}</h2>
+		<p>Written By {{author}}</p>		
+		<p>{{createdAt}}</p>
+
+		<button class="upvote" data-id="{{_id}}">Upvote <i class="fa fa-thumbs-up" aria-hidden="true"></i> {{upvotes}}</button>
+		<button class="downvote" data-id="{{_id}}">Downvote <i class="fa fa-thumbs-down" aria-hidden="true"></i> {{downvotes}}</button>
+	</article>	
+</template>

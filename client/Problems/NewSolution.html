@@ -1,0 +1,15 @@
+<template name="NewSolution">
+	<div class="new-answer-container">
+		<form class="new-answer">
+        	<input type="text" name="answer" placeholder="Type your Answer..." />
+        	<button type="Submit" class="btn btn-primary">Submit</button>
+      	</form>
+	</div>
+
+	<section class="solutions">
+		{{#each solutions}}
+			{{> solution}}
+		{{/each}}		
+	</section>
+
+</template>
