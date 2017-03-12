@@ -1,0 +1,19 @@
+<template name="NewContributer">
+	<div class="new-contributer-container">
+		<form class="new-contributer">
+        	<input type="text" name="Fullname" placeholder="Full Name" />
+        	<input type="text" name="Interests" placeholder="Interested positions" />
+        	<input type="text" name="Skills" placeholder="Languages and Technologies you know..." />
+        	<input type="email" name="Email" placeholder="Contact email" />
+        	<input type="text" name="githublink" placeholder=" Your Github Account Link" />
+        	<button type="Submit" class="btn btn-primary">Submit</button>
+      	</form>
+	</div>
+
+	<section class="contributers">
+		{{#each contributers}}
+			{{> contributer}}
+		{{/each}}		
+	</section>
+
+</template>

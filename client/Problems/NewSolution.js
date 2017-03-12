@@ -17,10 +17,19 @@ Template.NewSolution.events({
       downvotes: 0,
       Upvoters: [],
       Downvoters: [],
-    });
+    },
+    function(err)
+    {
+      // Clear form if no error
+      if(!err)
+      {
+        target.answer.value = '';  
+      }
+    }
+    );
  
     // Clear form
-    target.answer.value = '';
+    //target.answer.value = '';
   },
 });
 

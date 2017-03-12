@@ -476,8 +476,8 @@ input, select, textarea
 
 // problem card end
 
-// problemSingle.html styles
 
+// problemSingle.html styles
 .problemSingle
     background #FFF
     padding 10px 20px 20px
@@ -497,6 +497,8 @@ input, select, textarea
 
     p
         opacity: 0.4
+// problemSingle.html styles end
+
 
 // answer insert form
 .new-answer-container
@@ -529,7 +531,7 @@ input, select, textarea
         border none
         background transparent
 
-
+ //Each solution card
 .solution
     background #FFF
     padding 10px 20px 20px
@@ -604,6 +606,157 @@ input, select, textarea
         .fa-thumbs-down
             margin-left 3px
             font-size 20px
+
+    .collaboratebtn
+        display inline-block
+        cursor pointer
+        background white
+        color blue
+        text-decoration none
+        text-transform uppercase
+        padding 5px 15px
+        margin-right 10px
+        margin-left 550px
+        border none
+        font-weight 400
+        shadow-level(1)
+        trans()
+        &:hover
+            background blue
+            border-color @background
+            shadow-level(2)
+            color white
+        &:focus
+            outline 0
+
+        .fa-users
+            margin-left 3px
+            font-size 20px
+
+
+
+// contributers style  -- NewContributer.html
+// contributer insert form
+.new-contributer-container
+    position relative
+    background #FFF
+    padding 20px
+    margin 20px
+    shadow-level(2)
+    .fa-close
+        position absolute
+        top 0
+        right 0
+        padding 20px  
+    label
+        display block
+        margin-bottom 10px
+    textarea, input
+        width 100%
+    
+input, select, textarea
+    color black
+    background #FFF
+    border solid 2px light-grey
+    border-radius 2px
+    font-weight 800
+    width 100%
+    padding 6px 10px
+    margin-bottom 10px  
+    &.static-input
+        border none
+        background transparent
+
+
+
+ //Each contributer card
+.contributer
+    background #FFF
+    padding 10px 20px 20px
+    margin 20px 0px
+    margin-left 100px
+    width 400px
+    position relative
+    display inline-block
+    z-index 1
+    shadow-level(1)
+    trans()
+    .btn-primary, .btn-deny
+            display block
+    
+    &:hover
+        shadow-level(3)
+        // animation card 0.6s ease 1 forwards
+
+        
+    h3
+        font-size: 1.4em
+        opacity: 0.8
+        border-bottom: rgba(0,0,0, 0.2) solid 2px
+        margin-top 30px
+        margin-bottom 30px
+        text-align: center
+        padding-bottom 10px
+    p
+        opacity: 1
+        text-align: left
+
+    .user-info
+        margin auto
+        td
+            padding 10px 20px
+
+    a
+        text-decoration none
+    button
+        display block
+        margin 30px auto 20px
+        text-transform uppercase
+        background #444
+        font-weight 600
+        text-decoration none
+    .fa-github
+            margin-left 3px
+            font-size 20px
+
+    
+
+    .card-img
+        display: block
+        width 150px
+        height 150px
+        margin 10px auto
+        border-radius 50%
+        padding 10px
+        border 2px solid rgba(0,0,0, 0.4)
+        background-repeat no-repeat
+        background-position center center
+        background-size cover
+
+//contributer card end
+
+// solutionSingle.html styles
+.solutionSingle
+    background #FFF
+    padding 10px 20px 20px
+    margin 20px
+    position relative
+    z-index 1
+    shadow-level(1)
+    trans()
+
+    h3
+        font-size: 2em;
+        opacity: 0.8;
+        border-bottom: rgba(255,0,0, 0.3) solid 3px
+        margin-top 0px
+        margin-bottom 10px
+        padding-bottom 10px
+
+    p
+        opacity: 0.4
+// solutionSingle.html styles end
+
 
 
 @keyframes card

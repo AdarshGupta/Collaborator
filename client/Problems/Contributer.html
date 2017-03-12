@@ -1,0 +1,26 @@
+<template name="contributer">
+	<article class="contributer card">
+		<img class="card-img" src="https://randomuser.me/api/portraits/lego/5.jpg" alt="Card image cap">
+		<div class="card-block">
+			<h3 class="card-title">{{fullname}}</h3>
+			<!-- <p>Full Name: {{fullname}}</p> -->
+			<p class="card-text">
+				<table class="user-info">
+					<tr>
+						<td>Interests:</td>
+						<td>{{interests}}</td>
+					</tr>
+					<tr>
+						<td>Skills:</td>
+						<td>{{skills}}</td>
+					</tr>
+					<tr>
+						<td>Contact:</td>
+						<td>{{email}}</td>
+					</tr>
+				</table>
+				<a href="{{githublink}}"><button class="githublink">Github Profile <i class="fa fa-github" aria-hidden="true"></i></button></a>
+			</p>
+		</div>
+	</article>	
+</template>
