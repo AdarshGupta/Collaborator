@@ -29,6 +29,7 @@ Template.NewSolution.helpers({
   solutions: function () {
     // ...
     return Solutions.find({problemid: Session.get('pathid')}, {
+      sort: {upvotes: -1}
       /*
       sort: Sort specifier,
       skip: Number,

@@ -2,6 +2,7 @@ Template.Problems.helpers({
 	problems: function () {
 		// ...
 		return Problems.find({}, {
+            sort: {upvotes : -1}
 			/*
 			sort: Sort specifier,
 			skip: Number,
