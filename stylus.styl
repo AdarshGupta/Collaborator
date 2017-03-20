@@ -653,6 +653,15 @@ input, select, textarea
         margin-bottom 10px
     textarea, input
         width 100%
+
+    h3
+        font-size: 1.2em
+        opacity: 0.8
+        border-bottom: rgba(0,0,0, 0.2) solid 2px
+        margin-top 30px
+        margin-bottom 30px
+        text-align: left
+        padding-bottom 10px
     
 input, select, textarea
     color black
@@ -755,12 +764,61 @@ input, select, textarea
     p
         opacity: 0.4
 
-    .fa
+    .fa-lightbulb-o
         font-size: 3em
         color: yellow
 // solutionSingle.html styles end
 
+// Each idea card similar to solutionsingle
+.ideacard
+    background #FFF
+    padding 10px 20px 20px
+    margin 20px
+    position relative
+    z-index 1
+    shadow-level(1)
+    trans()
 
+    h3
+        font-size: 2em
+        opacity: 0.8
+        margin-top 0px
+        margin-bottom 10px
+        padding-bottom 10px
+
+    p
+        opacity: 0.4
+
+    .fa-lightbulb-o
+        font-size: 3em
+        color: yellow
+
+    .collaboratebtn
+        display inline-block
+        cursor pointer
+        background white
+        color blue
+        text-decoration none
+        text-transform uppercase
+        padding 5px 15px
+        margin-right 10px
+        margin-left 10px
+        border none
+        font-weight 400
+        shadow-level(1)
+        trans()
+        &:hover
+            background blue
+            border-color @background
+            shadow-level(2)
+            color white
+        &:focus
+            outline 0
+
+        .fa-users
+            margin-left 3px
+            font-size 20px
+// idea card end
 
 @keyframes card
     0%
