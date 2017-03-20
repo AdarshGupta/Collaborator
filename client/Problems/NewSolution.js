@@ -12,7 +12,7 @@ Template.NewSolution.events({
       problemid: Session.get('pathid'),
       answer: text,
       createdAt: new Date(), // current time
-      author: Meteor.user().username,
+      author: Meteor.user().emails[0].address,
       upvotes: 0,
       downvotes: 0,
       Upvoters: [],
