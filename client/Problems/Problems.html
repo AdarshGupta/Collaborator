@@ -1,5 +1,19 @@
 <template name="Problems">
 	{{> newProblem}}
+
+	<select class="categoryselection">
+		<option value = "">Category (All)</option>
+	    <option value = "Environment">Environment</option>
+	    <option value = "Commerce & Trade">Commerce & Trade</option>
+	    <option value = "Culture">Culture</option>
+	    <option value = "Travel & Transport">Travel & Transport</option>
+	    <option value = "Science & Technology">Science & Technology</option>
+	    <option value = "Family / Community / Society">Family / Community / Society</option>
+	    <option value = "HealthCare">HealthCare</option>
+	    <option value = "Education">Education</option>
+	    <option value = "Psychological">Psychological</option>
+	    <option value = "Government">Government</option>
+  	</select>
 	<section class="problems">
 		{{#each problems}}
 			{{> problem}}

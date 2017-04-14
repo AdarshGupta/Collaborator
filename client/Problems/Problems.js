@@ -1,7 +1,9 @@
+
 Template.Problems.helpers({
 	problems: function () {
 		// ...
-		return Problems.find({}, {
+        var category = Session.get('selectedCategory');
+		return Problems.find(category ? {tag: category} : {}, {
             sort: {upvotes : -1}
 			/*
 			sort: Sort specifier,
@@ -16,6 +18,13 @@ Template.Problems.helpers({
 });
 
 Template.Problems.events({
+
+    "change .categoryselection": function(e, t){
+        var category = $(e.currentTarget).val();
+        Session.set('selectedCategory', category);
+    },
+
+
 	'click .upvote': _.throttle( function( e,  t ) {
      e.preventDefault();
      var id = $(e.currentTarget).data( 'id' );
