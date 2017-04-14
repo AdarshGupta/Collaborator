@@ -1,0 +1,15 @@
+<template name="Profile">
+	<h3 class="profilehead">Questions Asked</h3>
+	<section class="problems">
+		{{#each problems}}
+			{{> problem}}
+		{{/each}}		
+	</section>
+
+	<h3 class="profilehead">Solutions Given</h3>
+	<section class="solutions">
+		{{#each solutions}}
+			{{> solution}}
+		{{/each}}		
+	</section>
+</template>
