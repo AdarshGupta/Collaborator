@@ -24,6 +24,15 @@ Template.Problems.events({
         Session.set('selectedCategory', category);
     },
 
+    'click .new-problem': function () {
+        // ...
+        Session.set('newProblem', true);
+    },
+    'click .fa-close': function () {
+        // ...
+        Session.set('newProblem', false);
+    },
+
 
 	'click .upvote': _.throttle( function( e,  t ) {
      e.preventDefault();

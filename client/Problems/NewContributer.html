@@ -1,15 +1,24 @@
 <template name="NewContributer">
-	<div class="new-contributer-container">
-		<h3>Become a Contributer</h3>
-		<form class="new-contributer">
-        	<input type="text" name="Fullname" placeholder="Full Name" />
-        	<input type="text" name="Interests" placeholder="Interested positions" />
-        	<input type="text" name="Skills" placeholder="How can you contribute (Eg. languages, skills" />
-        	<input type="email" name="Email" placeholder="Contact email" />
-        	<input type="text" name="githublink" placeholder=" Your Github Account Link" />
-        	<button type="Submit" class="btn btn-primary">Submit</button>
-      	</form>
-	</div>
+
+	{{#if $.Session.get 'newContributer'}}
+		<div class="new-contributer-container">
+			<i class="fa fa-close"></i>
+			<h3>Become a Contributer</h3>
+			<form class="new-contributer">
+	        	<input type="text" name="Fullname" placeholder="Full Name" />
+	        	<input type="text" name="Interests" placeholder="Interested Role" />
+	        	<input type="text" name="Skills" placeholder="How can you contribute?(In Brief)" />
+	        	<input type="email" name="Email" placeholder="Contact email" />
+	        	<input type="text" name="facebooklink" placeholder=" Your Facebook Account Link" />
+	        	<input type="text" name="twitterlink" placeholder=" Your Twitter Account Link" />
+	        	<input type="text" name="githublink" placeholder=" Your Github Account Link" />
+	        	<button type="Submit" class="btn btn-primary">Submit</button>
+	      	</form>
+		</div>
+	{{else}}
+		<button class="new-contributer btn btn-primary">Become a Contributer</button>
+	{{/if}}
+
 
 	<section class="contributers">
 		{{#each contributers}}

@@ -1,5 +1,9 @@
 <template name="Problems">
-	{{> newProblem}}
+	{{#if $.Session.get 'newProblem'}}
+		{{> newProblem}}
+	{{else}}
+		<button class="new-problem btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i>Post A Problem</button>
+	{{/if}}
 
 	<select class="categoryselection">
 		<option value = "">Category (All)</option>

@@ -1,4 +1,15 @@
+
 Template.NewContributer.events({
+  'click .new-contributer': function () {
+    // ...
+    Session.set('newContributer', true);
+  },
+  'click .fa-close': function () {
+    // ...
+    Session.set('newContributer', false);
+  },
+
+
   'submit .new-contributer'(event) {
     // Prevent default browser form submit
     event.preventDefault();
@@ -9,6 +20,8 @@ Template.NewContributer.events({
     const interests = target.Interests.value;
     const skills = target.Skills.value;
     const email = target.Email.value;
+    const facebooklink = target.facebooklink.value;
+    const twitterlink = target.twitterlink.value;
     const githublink = target.githublink.value;
  
     // Insert a task into the collection
@@ -20,7 +33,9 @@ Template.NewContributer.events({
       interests: interests,
       skills: skills,
       email: email,
-      githublink: githublink,
+      facebooklink: facebooklink,
+      twitterlink: githublink,
+      githublink: githublink
     },
     );
  
@@ -29,6 +44,8 @@ Template.NewContributer.events({
     target.Interests.value = '';
     target.Skills.value = '';
     target.Email.value = '';
+    target.facebooklink.value = '';
+    target.twitterlink.value = '';
     target.githublink.value = '';
   },
 });

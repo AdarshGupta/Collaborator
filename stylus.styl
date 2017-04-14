@@ -251,6 +251,8 @@ header
         margin-top 40px
         padding-left $side-nav-large
 
+
+
 // problem insert form
 .new-problem-container
     position relative
@@ -259,6 +261,7 @@ header
     margin 20px
     shadow-level(2)
     .fa-close
+    cursor pointer
         position absolute
         top 0
         right 0
@@ -268,6 +271,11 @@ header
         margin-bottom 10px
     textarea, input
         width 100%
+
+.new-problem
+    margin-left 20px
+.fa-pencil
+    margin-right 5px
     
 input, select, textarea
     color black
@@ -334,7 +342,7 @@ input, select, textarea
     padding 5px 15px
     border solid 3px purp
     border-radius 2px
-    font-weight 800
+    font-weight 600
     shadow-level(1)
     trans()
     &:hover
@@ -344,6 +352,7 @@ input, select, textarea
     &.btn-primary
         background red
         border-color red
+        margin-top 15px
         color white
         &:hover
             background @background - 40
@@ -394,16 +403,16 @@ input, select, textarea
             border-color @background
 
 // select option in problems page - filter
-.categoryselection
+.categoryselection 
     width 200px
     margin-left 895px
-    border solid 2px red
+    border-bottom solid 2px red
 
     &:focus
         outline 0
 
 // profile page
-.profilehead
+.profilehead, .collaboratehead
     font-size: 2em;
     opacity: 1;
     color red
@@ -684,6 +693,7 @@ input, select, textarea
     margin 20px
     shadow-level(2)
     .fa-close
+        cursor pointer
         position absolute
         top 0
         right 0
@@ -702,6 +712,9 @@ input, select, textarea
         margin-bottom 30px
         text-align: left
         padding-bottom 10px
+
+.new-contributer
+    margin-left 20px
     
 input, select, textarea
     color black
@@ -721,7 +734,7 @@ input, select, textarea
  //Each contributer card
 .contributer
     background #FFF
-    padding 10px 20px 20px
+    padding 10px 20px 10px
     margin 20px 0px
     margin-left 100px
     width 400px
@@ -753,20 +766,36 @@ input, select, textarea
     .user-info
         margin auto
         td
-            padding 10px 20px
+            padding 10px 10px
 
     a
         text-decoration none
-    button
-        display block
-        margin 30px auto 20px
-        text-transform uppercase
-        background #444
-        font-weight 600
-        text-decoration none
+    
     .fa-github
-            margin-left 3px
-            font-size 20px
+        color #444
+        font-size 30px
+        opacity 0.8
+        trans()
+        &:hover
+            opacity 1
+
+    .fa-facebook-official
+        color #3b5998
+        font-size 30px
+        margin-left 100px
+        opacity 0.8
+        trans()
+        &:hover
+            opacity 1
+
+    .fa-twitter
+        color #00aced
+        font-size 30px
+        margin 20px 20px
+        opacity 0.8
+        trans()
+        &:hover
+            opacity 1
 
     
 
