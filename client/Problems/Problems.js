@@ -1,4 +1,3 @@
-
 Template.Problems.helpers({
 	problems: function () {
 		// ...
@@ -14,7 +13,7 @@ Template.Problems.helpers({
 			transform: Function
 			*/
 		});
-	}
+	},
 });
 
 Template.Problems.events({
@@ -31,6 +30,14 @@ Template.Problems.events({
     'click .fa-close': function () {
         // ...
         Session.set('newProblem', false);
+    },
+    'click .fa-trash': function(e, t) {
+        e.preventDefault();
+
+        if (confirm("Delete this post?")) {
+          var currentPostId = this._id;
+          Problems.remove(currentPostId);
+        }
     },
 
 

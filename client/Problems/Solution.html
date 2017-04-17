@@ -1,6 +1,9 @@
 <template name="solution">
 	<article class="solution">
 		<h3>Solution: </h3>
+		{{#if isAuthor}}
+		<i class="fa fa-trash"></i>
+		{{/if}}
 		<h2>{{answer}}</h2>
 		<p>Written By {{author}}</p>		
 		<p>{{createdAt}}</p>

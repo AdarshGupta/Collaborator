@@ -1,11 +1,15 @@
 <template name="problem">
 	<article class="problem">
 		<h3><i class="fa fa-quora" aria-hidden="true"></i> {{problem}}</h3>
+
+		{{#if isAuthor}}
+		<i class="fa fa-trash"></i>
+		{{/if}}
+
 		<p>{{description}}</p>
 
 		<button class="upvote" data-id="{{_id}}">Upvote <i class="fa fa-thumbs-up" aria-hidden="true"></i> {{upvotes}}</button>
 		<button class="downvote" data-id="{{_id}}">Downvote <i class="fa fa-thumbs-down" aria-hidden="true"></i> {{downvotes}}</button>
-
 		<a href="/problem/{{_id}}">View Answers</a>
 	</article>	
 </template>

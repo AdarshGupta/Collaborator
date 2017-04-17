@@ -45,3 +45,4 @@ datariot:ganalytics
 check    			# Checks if value is string for example
 #reactive-var        # Instead of session to keep reactivity limited to a template. It has been added at the top
 underscore
+session
