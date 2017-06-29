@@ -46,3 +46,5 @@ check    			# Checks if value is string for example
 #reactive-var        # Instead of session to keep reactivity limited to a template. It has been added at the top
 underscore
 session
+
+okgrow:analytics@=2.0.1   # For google analytics
